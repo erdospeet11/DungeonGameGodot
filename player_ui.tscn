@@ -1,0 +1,323 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj4vf4e5vf5dr"]
+
+[ext_resource type="Script" path="res://player_ui.gd" id="1_5g47t"]
+[ext_resource type="Texture2D" uid="uid://cdr0ubvcux5pp" path="res://PixelUI_01.png" id="2_k1nyr"]
+[ext_resource type="PackedScene" uid="uid://56h2tq625sj7" path="res://CommandManager.tscn" id="3_ayop4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txa6v"]
+atlas = ExtResource("2_k1nyr")
+region = Rect2(0, 0, 16.119, 16)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_5g47t")
+
+[node name="Window" type="Panel" parent="."]
+custom_minimum_size = Vector2(400, 400)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AttributeContainer" type="VBoxContainer" parent="Window/VBoxContainer"]
+layout_mode = 2
+
+[node name="Health" type="HBoxContainer" parent="Window/VBoxContainer/AttributeContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Window/VBoxContainer/AttributeContainer/Health"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Health:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Window/VBoxContainer/AttributeContainer/Health"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack" type="HBoxContainer" parent="Window/VBoxContainer/AttributeContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Window/VBoxContainer/AttributeContainer/Attack"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Attack:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Window/VBoxContainer/AttributeContainer/Attack"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Energy" type="HBoxContainer" parent="Window/VBoxContainer/AttributeContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Window/VBoxContainer/AttributeContainer/Energy"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Energy:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Window/VBoxContainer/AttributeContainer/Energy"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Window/VBoxContainer"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Window/VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 9
+
+[node name="Panel" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel3" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel4" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel5" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel5"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel6" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel6"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel7" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel7"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel8" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel8"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel9" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel9"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel10" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel10"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel11" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel11"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel12" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel12"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel13" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel13"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel14" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel14"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel15" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel15"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel16" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel16"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel17" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel17"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="Panel18" type="Panel" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Window/VBoxContainer/Panel/VBoxContainer/GridContainer/Panel18"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_txa6v")
+expand_mode = 1
+
+[node name="CommanManager" parent="Window/VBoxContainer/Panel/VBoxContainer" instance=ExtResource("3_ayop4")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="Window/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Close"
+
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]

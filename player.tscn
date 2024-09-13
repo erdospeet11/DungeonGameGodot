@@ -40,8 +40,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mu84w"]
+size = Vector2(16, 16)
 
-[node name="CharacterBody2D" type="Area2D"]
+[node name="player" type="CharacterBody2D"]
 script = ExtResource("1_hml2n")
 
 [node name="animatedsprite" type="AnimatedSprite2D" parent="."]
@@ -53,3 +54,27 @@ collide_with_areas = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_mu84w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 50.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AttributeContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/AttributeContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/AttributeContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/AttributeContainer"]
+layout_mode = 2

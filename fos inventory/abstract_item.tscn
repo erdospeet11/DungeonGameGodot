@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyfgn02nkx5tj"]
+
+[ext_resource type="Script" path="res://fos inventory/abstract_item.gd" id="1_adgvo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1was"]
+size = Vector2(15, 15)
+
+[node name="AbstractItem" type="Sprite2D" groups=["Item", "Itemm"]]
+script = ExtResource("1_adgvo")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Item", "Itemm"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_j1was")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

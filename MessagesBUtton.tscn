@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgl6he31icju8"]
+
+[ext_resource type="Texture2D" uid="uid://bb01s1j3fkkl0" path="res://MiniWorldSprites/User Interface/UiIcons.png" id="1_alent"]
+[ext_resource type="Texture2D" uid="uid://o1xnuejdkdcr" path="res://PixelUI_02.png" id="2_vg767"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbywc"]
+atlas = ExtResource("1_alent")
+region = Rect2(0, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i08lo"]
+atlas = ExtResource("2_vg767")
+region = Rect2(32, 0, 32, 32)
+
+[node name="Panel" type="Panel"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_rbywc")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+modulate = Color(0.866641, 0.475397, 0.207467, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_i08lo")
