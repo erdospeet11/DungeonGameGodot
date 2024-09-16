@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://gbi1kd5tdycm"]
-
-[ext_resource type="PackedScene" uid="uid://dq80dxx8hlp3d" path="res://fos inventory/slot.tscn" id="1_51mtm"]
-[ext_resource type="Script" path="res://fos inventory/passive_slot.gd" id="2_ldbp2"]
-
-[node name="PassiveSlot" instance=ExtResource("1_51mtm")]
-script = ExtResource("2_ldbp2")

@@ -27,6 +27,13 @@ project/assembly_name="DungeonGame"
 
 enabled=PackedStringArray("res://addons/SimpleTODO/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://SaveResourceManager/": "red",
+"res://damagepopup/": "red"
+}
+
 [global_group]
 
 Itemm=""

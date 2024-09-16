@@ -61,6 +61,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 50.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="AttributeContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 2
