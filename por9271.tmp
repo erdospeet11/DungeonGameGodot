@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxd5pj6nqs1ij"]
+
+[ext_resource type="Texture2D" uid="uid://du67hwmd5m6go" path="res://MiniWorldSprites/Miscellaneous/Portal.png" id="1_d28kl"]
+[ext_resource type="Script" path="res://portal.gd" id="1_hxmj8"]
+[ext_resource type="PackedScene" uid="uid://utd43akw6ijc" path="res://main.tscn" id="2_2n7eq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjodf"]
+atlas = ExtResource("1_d28kl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cnek"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_hxmj8")
+location = ExtResource("2_2n7eq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_hjodf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8cnek")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

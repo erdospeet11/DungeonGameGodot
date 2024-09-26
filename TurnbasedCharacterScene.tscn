@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://doc01ve0qwtq1"]
+
+[ext_resource type="Script" path="res://TurnbasedCharacterController.gd" id="1_hml2n"]
+[ext_resource type="Texture2D" uid="uid://bi2ro0fm72n24" path="res://Assets/Holy & Mechanical Free Asset Pack/Free Animations/Brave Knight/Brave Knight.png" id="2_ycnm4"]
+[ext_resource type="PackedScene" uid="uid://dd4d35lgq6w6v" path="res://quest.tscn" id="3_ef2w6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwiy8"]
+atlas = ExtResource("2_ycnm4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fn3px"]
+atlas = ExtResource("2_ycnm4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84qim"]
+atlas = ExtResource("2_ycnm4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lkou"]
+atlas = ExtResource("2_ycnm4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6a2lg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwiy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fn3px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84qim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lkou")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mu84w"]
+size = Vector2(16, 16)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_hml2n")
+
+[node name="animatedsprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6a2lg")
+animation = &"walk"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collide_with_areas = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mu84w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 50.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="AttributeContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/AttributeContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/AttributeContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/AttributeContainer"]
+layout_mode = 2
+
+[node name="CanvasLayer2" parent="." instance=ExtResource("3_ef2w6")]
+visible = false

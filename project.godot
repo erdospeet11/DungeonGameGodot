@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="DungeonGame"
-run/main_scene="res://main.tscn"
+run/main_scene="res://SampleDungeon.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://skill_icons_by_quintino_pixels/24x24/skill_icons39.png"
+config/icon="res://Assets/skill_icons_by_quintino_pixels/24x24/skill_icons39.png"
 
 [display]
 
@@ -30,9 +30,11 @@ enabled=PackedStringArray("res://addons/SimpleTODO/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://LogicChamber/": "red",
+"res://Assets/": "orange",
+"res://Damagepopup/": "red",
+"res://GameModes/": "green",
 "res://SaveResourceManager/": "red",
-"res://damagepopup/": "red"
+"res://addons/": "pink"
 }
 
 [global_group]

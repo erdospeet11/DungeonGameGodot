@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvbif14evmbau"]
 
-[ext_resource type="Script" path="res://damagepopup/root.gd" id="1_ahyvq"]
+[ext_resource type="Script" path="res://Damagepopup/root.gd" id="1_ahyvq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6y0q"]
 bg_color = Color(0.262745, 0.262745, 0.262745, 0.8)
