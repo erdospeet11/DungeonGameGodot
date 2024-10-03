@@ -31,6 +31,7 @@ enabled=PackedStringArray("res://addons/SimpleTODO/plugin.cfg")
 
 folder_colors={
 "res://Assets/": "orange",
+"res://Combat/": "blue",
 "res://Damagepopup/": "red",
 "res://GameModes/": "green",
 "res://SaveResourceManager/": "red",
