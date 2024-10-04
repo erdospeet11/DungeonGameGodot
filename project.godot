@@ -17,6 +17,8 @@ config/icon="res://Assets/skill_icons_by_quintino_pixels/24x24/skill_icons39.png
 
 [display]
 
+window/size/viewport_width=650
+window/size/viewport_height=950
 window/vsync/vsync_mode=0
 
 [dotnet]
@@ -37,11 +39,6 @@ folder_colors={
 "res://SaveResourceManager/": "red",
 "res://addons/": "pink"
 }
-
-[global_group]
-
-Itemm=""
-Item=""
 
 [input]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=4 uid="uid://utd43akw6ijc"]
 
 [ext_resource type="Texture2D" uid="uid://17myk5x4tqk3" path="res://Assets/Dungeon Tileset + Spikes.png" id="1_bh8cl"]
-[ext_resource type="PackedScene" uid="uid://doc01ve0qwtq1" path="res://TurnbasedCharacterScene.tscn" id="2_gkbo3"]
+[ext_resource type="PackedScene" path="res://TurnbasedCharacterScene.tscn" id="2_gkbo3"]
 [ext_resource type="Script" path="res://area_2d.gd" id="3_6ycxe"]
 [ext_resource type="Texture2D" uid="uid://jyij7vhmkxb0" path="res://Assets/Basic Asset Pack/Basic Asset Pack/basic magical animations/glowing wisp/GlowingWisp.png" id="4_4sf3t"]
 [ext_resource type="Texture2D" uid="uid://w4gwm3o4ctk1" path="res://Assets/Basic Asset Pack/Basic Asset Pack/basic magical animations/adept necromancer/AdeptNecromancer.png" id="5_gusp1"]

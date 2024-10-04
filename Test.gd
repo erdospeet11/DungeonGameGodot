@@ -11,6 +11,8 @@ func check_cell_at_coordinate(coord: Vector2i) -> bool:
 	return cell_in_layer1 and not cell_in_layer2
 
 func _ready():
+	print(OS.get_name())
+	
 	# Example usage
 	var coordinate_to_check = Vector2i(15, 51)
 	if check_cell_at_coordinate(coordinate_to_check):

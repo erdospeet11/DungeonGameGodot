@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Player
+class_name TurnBasedPlayerdd
 
 @export_group("Player Attributes")
 @export var health: int = 100

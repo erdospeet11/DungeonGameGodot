@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://clmio078n2n2x" path="res://Assets/MiniWorldSprites/Buildings/Wood/Tower.png" id="11_ejr6g"]
 [ext_resource type="Texture2D" uid="uid://ddrnm2utcucl3" path="res://Assets/MiniWorldSprites/Buildings/Wood/Workshops.png" id="12_hur53"]
 [ext_resource type="Texture2D" uid="uid://du67hwmd5m6go" path="res://Assets/MiniWorldSprites/Miscellaneous/Portal.png" id="13_s2iuk"]
-[ext_resource type="PackedScene" uid="uid://doc01ve0qwtq1" path="res://TurnbasedCharacterScene.tscn" id="14_ult5j"]
-[ext_resource type="PackedScene" uid="uid://cxd5pj6nqs1ij" path="res://portal.tscn" id="15_urjpe"]
+[ext_resource type="PackedScene" path="res://TurnbasedCharacterScene.tscn" id="14_ult5j"]
+[ext_resource type="PackedScene" path="res://portal.tscn" id="15_urjpe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkc6b"]
 texture = ExtResource("1_srs43")
